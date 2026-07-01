@@ -1,0 +1,318 @@
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * SAMI — Paleta "Lavanda Cálida"
+ * Primario: violeta suave #7C6AF7
+ *
+ * Por qué violeta/lavanda es más amigable a la vista:
+ *   · Wavelength intermedia (380-450nm) — menos fatiga que azules puros
+ *   · Asociado con calma, confianza, tecnología médica moderna
+ *   · Fondos cálidos (crema) + texto profundo (navy) = contraste cómodo
+ *   · Usado por Figma, Notion, GitHub Copilot — probado en uso prolongado
+ *   · WCAG AA en todos los pares críticos
+ * ═══════════════════════════════════════════════════════════════════
+ */
+/*
+ * SAMI — Paleta inspirada en Vuexy + primary #6DBBB7
+ * Light: fondo #F4F5FA (azul-gris suave), sidebar blanco, cards blancas
+ * Dark:  fondo #25273D (azul-gris profundo), sidebar #1C1D32
+ */
+:root {
+    --font-size: 16px;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --radius: 0.5rem;
+
+    --background: #F4F5FA;
+    --foreground: #444060;
+    --card: #FFFFFF;
+    --card-foreground: #444060;
+    --popover: #FFFFFF;
+    --popover-foreground: #444060;
+    --secondary: #ECF0FF;
+    --secondary-foreground: #444060;
+    --muted: #F0F1F8;
+    --muted-foreground: #8A8AA8;
+    --accent: #5AA8A4;
+    --accent-foreground: #ffffff;
+    --primary: #6DBBB7;
+    --primary-foreground: #ffffff;
+    --destructive: #EA5455;
+    --destructive-foreground: #ffffff;
+    --success: #28C76F;
+    --success-foreground: #ffffff;
+    --warning: #FF9F43;
+    --warning-foreground: #ffffff;
+    --info: #00CFE8;
+    --info-foreground: #ffffff;
+    --border: #E3E4EE;
+    --input: transparent;
+    --input-background: #FFFFFF;
+    --switch-background: #9ECFCC;
+    --ring: #6DBBB7;
+    --chart-1: #6DBBB7;
+    --chart-2: #8DD0CC;
+    --chart-3: #8A8AA8;
+    --chart-4: #28C76F;
+    --chart-5: #FF9F43;
+    --sidebar: #FFFFFF;
+    --sidebar-foreground: #444060;
+    --sidebar-primary: #6DBBB7;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #5AA8A4;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #E3E4EE;
+    --sidebar-ring: #6DBBB7;
+}
+
+/* ─── TOKENS INTERNOS DE LA APP (/app/*) ────────────────────────────────────
+ * Paleta: realtimecolors.com · edf3f3-060909-5cada9-32716e-67c5c1
+ * Solo aplican dentro de .app-shell (MainLayout).
+ * Auth pages siguen usando :root sin cambios.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+/* App light — hereda :root */
+.app-shell {
+    --background: #F4F5FA;
+    --foreground: #444060;
+    --card: #FFFFFF;
+    --card-foreground: #444060;
+    --popover: #FFFFFF;
+    --popover-foreground: #444060;
+    --secondary: #ECF0FF;
+    --secondary-foreground: #444060;
+    --muted: #F0F1F8;
+    --muted-foreground: #8A8AA8;
+    --accent: #5AA8A4;
+    --accent-foreground: #ffffff;
+    --primary: #6DBBB7;
+    --primary-foreground: #ffffff;
+    --destructive: #EA5455;
+    --destructive-foreground: #ffffff;
+    --success: #28C76F;
+    --success-foreground: #ffffff;
+    --warning: #FF9F43;
+    --warning-foreground: #ffffff;
+    --info: #00CFE8;
+    --info-foreground: #ffffff;
+    --border: #E3E4EE;
+    --input: transparent;
+    --input-background: #FFFFFF;
+    --switch-background: #9ECFCC;
+    --ring: #6DBBB7;
+    --chart-1: #6DBBB7;
+    --chart-2: #8DD0CC;
+    --chart-3: #8A8AA8;
+    --chart-4: #28C76F;
+    --chart-5: #FF9F43;
+    --sidebar: #FFFFFF;
+    --sidebar-foreground: #444060;
+    --sidebar-primary: #6DBBB7;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #5AA8A4;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #E3E4EE;
+    --sidebar-ring: #6DBBB7;
+}
+
+/* App dark — Vuexy style */
+.dark .app-shell {
+    --background: #25273D;
+    --foreground: #D0D2DA;
+    --card: #2C2D4A;
+    --card-foreground: #D0D2DA;
+    --popover: #32334E;
+    --popover-foreground: #D0D2DA;
+    --secondary: #1F2038;
+    --secondary-foreground: #D0D2DA;
+    --muted: #2C2D4A;
+    --muted-foreground: #7B7C9C;
+    --accent: #4A9D99;
+    --accent-foreground: #ffffff;
+    --primary: #6DBBB7;
+    --primary-foreground: #ffffff;
+    --destructive: #EA5455;
+    --destructive-foreground: #ffffff;
+    --success: #28C76F;
+    --success-foreground: #ffffff;
+    --warning: #FF9F43;
+    --warning-foreground: #ffffff;
+    --info: #00CFE8;
+    --info-foreground: #ffffff;
+    --border: #3B3C5A;
+    --input: transparent;
+    --input-background: #2C2D4A;
+    --switch-background: #2A4846;
+    --ring: #6DBBB7;
+    --chart-1: #6DBBB7;
+    --chart-2: #8DD0CC;
+    --chart-3: #7B7C9C;
+    --chart-4: #28C76F;
+    --chart-5: #FF9F43;
+    --sidebar: #1C1D32;
+    --sidebar-foreground: #D0D2DA;
+    --sidebar-primary: #6DBBB7;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #4A9D99;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #2E2F4A;
+    --sidebar-ring: #6DBBB7;
+}
+
+/* Modo oscuro global — auth + cualquier ruta pública */
+.dark {
+    --background: #25273D;
+    --foreground: #D0D2DA;
+    --card: #2C2D4A;
+    --card-foreground: #D0D2DA;
+    --popover: #32334E;
+    --popover-foreground: #D0D2DA;
+    --primary: #6DBBB7;
+    --primary-foreground: #ffffff;
+    --secondary: #1F2038;
+    --secondary-foreground: #D0D2DA;
+    --muted: #2C2D4A;
+    --muted-foreground: #7B7C9C;
+    --accent: #4A9D99;
+    --accent-foreground: #ffffff;
+    --destructive: #EA5455;
+    --destructive-foreground: #ffffff;
+    --border: #3B3C5A;
+    --input: transparent;
+    --input-background: #2C2D4A;
+    --switch-background: #2A4846;
+    --ring: #6DBBB7;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --chart-1: #6DBBB7;
+    --chart-2: #8DD0CC;
+    --chart-3: #7B7C9C;
+    --chart-4: #28C76F;
+    --chart-5: #FF9F43;
+    --sidebar: #1C1D32;
+    --sidebar-foreground: #D0D2DA;
+    --sidebar-primary: #6DBBB7;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #4A9D99;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #2E2F4A;
+    --sidebar-ring: #6DBBB7;
+    --success: #28C76F;
+    --success-foreground: #ffffff;
+    --warning: #FF9F43;
+    --warning-foreground: #ffffff;
+    --info: #00CFE8;
+    --info-foreground: #ffffff;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-input-background: var(--input-background);
+    --color-switch-background: var(--switch-background);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-success: var(--success);
+    --color-success-foreground: var(--success-foreground);
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+    --color-info: var(--info);
+    --color-info-foreground: var(--info-foreground);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+    html {
+        font-size: var(--font-size);
+    }
+
+    h1 {
+        font-size: var(--text-2xl);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: var(--text-lg);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5;
+    }
+
+    h4 {
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5;
+    }
+
+    label {
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5;
+    }
+
+    button {
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5;
+    }
+
+    input {
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-normal);
+        line-height: 1.5;
+    }
+}
